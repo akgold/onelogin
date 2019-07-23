@@ -12,21 +12,17 @@
 #'
 #' @return a tibble of users and their attributes
 #' @export
-#'
-#' @examples
 ol_users_get <- function(con,  ...) {
   con$GET("api/1/users", ...)
 }
 
-#' Title
+#' Get a User by their ID
 #'
-#' @param con
-#' @param id
+#' @inheritParams ol_token_get
+#' @param id user id
 #'
-#' @return
+#' @return a tibble of user data
 #' @export
-#'
-#' @examples
 ol_user_get_by_id <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}"))
 }
@@ -60,16 +56,13 @@ ol_user_create <- function(con, firstname, lastname, email, username, ...) {
 
 ###### PUT
 
-#' Title
+#' Update User Information by ID
 #'
-#' @param con
-#' @param id
+#' @inheritParams ol_get_user_by_id
 #' @param ... named parameters to change in request
 #'
-#' @return
+#' @return tibble of user data
 #' @export
-#'
-#' @examples
 ol_user_update <- function(con, id, ...) {
   con$PUT(glue::glue("api/1/users/{id}"), body = list(...))
 }
@@ -89,18 +82,6 @@ ol_user_remove_role <- function(con, id, role_id_array) {
                      body = list(role_id_array = role_id_array))
 }
 
-#' Title
-#'
-#' @param con
-#' @param id
-#' @param password
-#' @param password_confirmation
-#' @param validate_policy
-#'
-#' @return
-#' @export
-#'
-#' @examples
 ol_user_pwd_cleartext <- function(con, id,
                                   password, password_confirmation,
                                   validate_policy = FALSE) {

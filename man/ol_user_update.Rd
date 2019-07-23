@@ -2,13 +2,16 @@
 % Please edit documentation in R/users.R
 \name{ol_user_update}
 \alias{ol_user_update}
-\title{Title}
+\title{Update User Information by ID}
 \usage{
 ol_user_update(con, id, ...)
 }
 \arguments{
 \item{...}{named parameters to change in request}
 }
+\value{
+tibble of user data
+}
 \description{
-Title
+Update User Information by ID
 }

@@ -7,14 +7,14 @@
 ol_users_get(con, ...)
 }
 \arguments{
-\item{con}{a onelogin connection}
+\item{con}{a onelogin object}
 
-\item{...}{filter parameters, optional}
+\item{...}{filter parameters, optional; see API documentation}
 }
 \value{
 a tibble of users and their attributes
 }
 \description{
 You can filter the user by various parameters in onelogin. See the
-\href{https://developers.onelogin.com/api-docs/1/users/get-users}{page in the API docs} for filter.
+\href{https://developers.onelogin.com/api-docs/1/users/get-users}{page in the API docs} for filter options.
 }

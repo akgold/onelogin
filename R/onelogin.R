@@ -1,24 +1,4 @@
-#'
 #' Class representing a Onelogin API client
-#'
-#' @name onelogin
-#'
-#' @section Usage:
-#' \preformatted{
-#' client <- onelogin$new(region = "us",
-#'   client_id = 'my_id',
-#'   client_secret = 'my_secret')
-#' }
-#'
-#' @section Details:
-#'
-#' This class allows a user to manipulate [onelogin](onelogin.com) via the
-#' [onelogin API](https://developers.onelogin.com/).
-#'
-#' Authentication is via OAuth 2.0 token, which is acquired by by
-#' providing a client ID and secret to get both an auth and refresh token.
-#'
-#' @export
 ONELOGIN <- R6::R6Class(
   'ONELOGIN',
 
@@ -190,11 +170,60 @@ ONELOGIN <- R6::R6Class(
   )
 )
 
-onelogin <- function(host = 'https://api.us.onelogin.com/',
+#' Class representing a Onelogin API client
+ONELOGIN <- R6::R6Class(
+  'ONELOGIN',
+
+  public = list(
+    host = NULL,
+    client_id = NULL,
+    client_secret = NULL,
+    access_token = NULL,
+    refresh_token = NULL,
+    token_expire = NULL,
+
+    get_onelogin = function() {
+      self
+    },
+
+    get_host = function(region) {
+      glue::glue("https://api.{region}.onelogin.com/api")
+    },
+
+    initialize = function(region, client_id, client_secret) {
+      region <- tolower(region)
+      stopifnot(region %in% c("us", "eu"))
+
+      self$host = self$get_host(region)
+      glue::glue("Defining onelogin API connection {self$host}")
+      self$client_id = safer::encrypt_string(client_id)
+      self$client_secret = safer::encrypt_string(client_secret)
+    }
+  )
+)
+
+#' Define a OneLogin Connection
+#'
+#' Define a connection to the OneLogin API. Please see the [API documentation]<https://developers.onelogin.com/api-docs/1/getting-started/dev-overview>
+#' for details on using this API and on getting credentials.
+#'
+#' @param region either "US" or "EU", defaults to "US"
+#' @param client_id OneLogin client ID, defaults to Sys.getenv("ONELOGIN_CLIENT_ID")
+#' @param client_secret OneLogin client secret, defaults to Sys.getenv("ONELOGIN_CLIENT_SECRET")
+#'
+#' @return a onelogin connection
+#' @export
+#'
+#' @examples
+#' if (interactive()) onelogin(region = "US")
+onelogin <- function(region = 'US',
                      client_id = Sys.getenv("ONELOGIN_CLIENT_ID"),
                      client_secret = Sys.getenv("ONELOGIN_CLIENT_SECRET")) {
-  con <- ONELOGIN$new(host = host,
-                      client_id = client_id, client_secret = client_secret)
+
+  con <- ONELOGIN$new(region = region,
+                      client_id = client_id,
+                      client_secret = client_secret)
+
   # Try to get access token
   tryCatch({
     con <- con$generate_token()
@@ -205,6 +234,3 @@ onelogin <- function(host = 'https://api.us.onelogin.com/',
   })
   con
 }
-
-
-

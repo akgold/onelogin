@@ -16,5 +16,5 @@ a onelogin connection
 Generate a OneLogin token
 }
 \examples{
-
+if(interactive()) ol_token_get
 }
