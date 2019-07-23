@@ -10,19 +10,17 @@ ONELOGIN <- R6::R6Class(
     refresh_token = NULL,
     token_expire = NULL,
 
-    get_onelogin = function() {
-      self
-      },
-
     get_host = function(region) {
-      glue::glue("https://api.{region}.onelogin.com/api")
+      glue::glue("https://api.{region}.onelogin.com/")
     },
 
     initialize = function(region, client_id, client_secret) {
       region <- tolower(region)
       stopifnot(region %in% c("us", "eu"))
-      message(glue::glue("Defining onelogin API connection {host}"))
+
+
       self$host = self$get_host(region)
+      message(glue::glue("Defining onelogin API connection {self$host}"))
       self$client_id = safer::encrypt_string(client_id)
       self$client_secret = safer::encrypt_string(client_secret)
     },
@@ -59,11 +57,11 @@ ONELOGIN <- R6::R6Class(
 
     get_refresh_token = function() {
       res <- self$POST("/auth/oauth2/v2/token",
-                auth_type = "generate_token",
-                body = list(grant_type = "refresh_token",
-                            access_token = self$access_token,
-                            refresh_token = self$refresh_token),
-                res_to_df = FALSE)
+                       auth_type = "generate_token",
+                       body = list(grant_type = "refresh_token",
+                                   access_token = self$access_token,
+                                   refresh_token = self$refresh_token),
+                       res_to_df = FALSE)
 
       self$access_token = res$access_token
       self$refresh_token = res$refresh_token
@@ -95,14 +93,8 @@ ONELOGIN <- R6::R6Class(
         httr::add_headers(Authorization = self$make_auth()),
         body = body,
         encode = encode
-      )
-      self$raise_error(res)
-      res <- httr::content(res, as = 'parsed')
-
-      if (res_to_df) {
-        res <- self$res_to_df(res)
-      }
-      res
+      ) %>%
+        self$parse_res(res_to_df = res_to_df)
     },
 
     POST = function(path, body, encode = 'json', res_to_df = TRUE,
@@ -112,14 +104,8 @@ ONELOGIN <- R6::R6Class(
         req,
         httr::add_headers(Authorization = self$make_auth(auth_type)),
         body = body,
-        encode = encode)
-      self$raise_error(res)
-      res <- httr::content(res, as = 'parsed')
-
-      if (res_to_df) {
-        res <- self$res_to_df(res)
-      }
-      res
+        encode = encode) %>%
+        self$parse_res(res_to_df = res_to_df)
     },
 
     DELETE = function(path, body = NULL, encode = 'json', res_to_df = TRUE) {
@@ -127,14 +113,8 @@ ONELOGIN <- R6::R6Class(
       res <- httr::DELETE(req,
                           httr::add_headers(Authorization = self$make_auth()),
                           body = body,
-                          encode = encode)
-      self$raise_error(res)
-      res <- httr::content(res, as = 'parsed')
-
-      if (res_to_df) {
-        res <- self$res_to_df(res)
-      }
-      res
+                          encode = encode) %>%
+        self$parse_res(res_to_df = res_to_df)
     },
 
     parse_res = function(res, res_to_df) {
@@ -166,38 +146,6 @@ ONELOGIN <- R6::R6Class(
       data %>%
         purrr::map_df(~ purrr::map_if(., is.null, function(x) NA) %>%
                         dplyr::as_tibble())
-    }
-  )
-)
-
-#' Class representing a Onelogin API client
-ONELOGIN <- R6::R6Class(
-  'ONELOGIN',
-
-  public = list(
-    host = NULL,
-    client_id = NULL,
-    client_secret = NULL,
-    access_token = NULL,
-    refresh_token = NULL,
-    token_expire = NULL,
-
-    get_onelogin = function() {
-      self
-    },
-
-    get_host = function(region) {
-      glue::glue("https://api.{region}.onelogin.com/api")
-    },
-
-    initialize = function(region, client_id, client_secret) {
-      region <- tolower(region)
-      stopifnot(region %in% c("us", "eu"))
-
-      self$host = self$get_host(region)
-      glue::glue("Defining onelogin API connection {self$host}")
-      self$client_id = safer::encrypt_string(client_id)
-      self$client_secret = safer::encrypt_string(client_secret)
     }
   )
 )

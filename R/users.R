@@ -27,6 +27,12 @@ ol_user_get_by_id <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}"))
 }
 
+#' Title
+#'
+#' @inheritParams ol_token_get
+#'
+#' @return a tibble of user data
+#' @export
 ol_user_get_apps <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}/apps"))
 }
@@ -58,7 +64,7 @@ ol_user_create <- function(con, firstname, lastname, email, username, ...) {
 
 #' Update User Information by ID
 #'
-#' @inheritParams ol_get_user_by_id
+#' @inheritParams ol_user_get_by_id
 #' @param ... named parameters to change in request
 #'
 #' @return tibble of user data

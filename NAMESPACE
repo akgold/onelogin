@@ -2,6 +2,7 @@
 
 export("%>%")
 export(ol_token_get)
+export(ol_user_get_apps)
 export(ol_user_get_by_id)
 export(ol_user_update)
 export(ol_users_get)
