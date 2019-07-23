@@ -5,7 +5,7 @@
 #'
 #' @section Usage:
 #' \preformatted{
-#' client <- onelogin$new(host = 'https://api.us.onelogin.com/',
+#' client <- onelogin$new(region = "us",
 #'   client_id = 'my_id',
 #'   client_secret = 'my_secret')
 #' }
@@ -15,8 +15,8 @@
 #' This class allows a user to manipulate [onelogin](onelogin.com) via the
 #' [onelogin API](https://developers.onelogin.com/).
 #'
-#' Authentication is done by providing a client ID and secret to get both an
-#' auth and refresh token.
+#' Authentication is via OAuth 2.0 token, which is acquired by by
+#' providing a client ID and secret to get both an auth and refresh token.
 #'
 #' @export
 ONELOGIN <- R6::R6Class(
@@ -34,9 +34,15 @@ ONELOGIN <- R6::R6Class(
       self
       },
 
-    initialize = function(host, client_id, client_secret) {
+    get_host = function(region) {
+      glue::glue("https://api.{region}.onelogin.com/api")
+    },
+
+    initialize = function(region, client_id, client_secret) {
+      region <- tolower(region)
+      stopifnot(region %in% c("us", "eu"))
       message(glue::glue("Defining onelogin API connection {host}"))
-      self$host = host
+      self$host = self$get_host(region)
       self$client_id = safer::encrypt_string(client_id)
       self$client_secret = safer::encrypt_string(client_secret)
     },
@@ -45,7 +51,9 @@ ONELOGIN <- R6::R6Class(
       switch(
         type,
         token = glue::glue("bearer:{self$access_token}"),
-        generate_token = glue::glue("client_id:{safer::decrypt_string(self$client_id)}, client_secret:{safer::decrypt_string(self$client_secret)}"))
+        generate_token = glue::glue(
+          paste0("client_id:{safer::decrypt_string(self$client_id)}, ",
+                 "client_secret:{safer::decrypt_string(self$client_secret)}")))
     },
 
     raise_error = function(res) {

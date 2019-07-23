@@ -5,10 +5,10 @@
 #' Get Users from OneLogin
 #'
 #' You can filter the user by various parameters in onelogin. See the
-#' [page in the API docs](https://developers.onelogin.com/api-docs/1/users/get-users) for filter.
+#' [page in the API docs](https://developers.onelogin.com/api-docs/1/users/get-users) for filter options.
 #'
-#' @param con a onelogin connection
-#' @param ... filter parameters, optional
+#' @inheritParams ol_token_get
+#' @param ... filter parameters, optional; see API documentation
 #'
 #' @return a tibble of users and their attributes
 #' @export
@@ -18,6 +18,15 @@ ol_users_get <- function(con,  ...) {
   con$GET("api/1/users", ...)
 }
 
+#' Title
+#'
+#' @param con
+#' @param id
+#'
+#' @return
+#' @export
+#'
+#' @examples
 ol_user_get_by_id <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}"))
 }

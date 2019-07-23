@@ -2,6 +2,10 @@
 
 export("%>%")
 export(ONELOGIN)
+export(ol_token_get)
+export(ol_token_get_rate_limit)
+export(ol_token_refresh)
+export(ol_token_revoke)
 export(ol_user_pwd_cleartext)
 export(ol_user_update)
 export(ol_users_get)
