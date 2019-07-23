@@ -1,0 +1,287 @@
+Hmm ... looks like a package
+
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2018-12-01>
+(./Rd2.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/alltt.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.dfu)))
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def)
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-hyperr
+ef.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-generi
+c.sty))
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+)) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/rerunfilecheck.
+sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/makeidx.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty)
+Writing index file Rd2.idx
+No file Rd2.aux.
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/gettitlestrin
+g.sty))
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ot1zi4.fd)
+
+LaTeX Font Warning: Font shape `OML/zi4/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 31.
+
+
+Overfull \hbox (35.84875pt too wide) in paragraph at lines 55--56
+[]\OT1/cmr/m/n/10 OneLogin client se-cret, de-faults to Sys.getenv("ONELOGIN[]C
+LIENT[]SECRET") 
+[1{/Users/alexkgold/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
+p}]
+No file Rd2.ind.
+[2] (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information){/Users/alexkgold/Library/T
+inyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}</Users/alexkgold/Li
+brary/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></
+Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></Users/alexkgold/Library/TinyTeX/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsl10.pfb></Users/alexkgold/Library/TinyTeX/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users/alexkgold/Library/T
+inyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Rd2.pdf (2 pages, 104613 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2019] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (1 entries accepted, 0 rejected).
+Sorting entries...done (0 comparisons).
+Generating output file Rd2.ind....done (5 lines written, 0 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2018-12-01>
+(./Rd2.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/alltt.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.dfu)))
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def)
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-hyperr
+ef.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-generi
+c.sty))
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+)) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/rerunfilecheck.
+sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/makeidx.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty)
+Writing index file Rd2.idx
+(./Rd2.aux)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/gettitlestrin
+g.sty)) (./Rd2.out) (./Rd2.out)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ot1zi4.fd)
+
+LaTeX Font Warning: Font shape `OML/zi4/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 31.
+
+(./Rd2.toc)
+Overfull \hbox (35.84875pt too wide) in paragraph at lines 55--56
+[]\OT1/cmr/m/n/10 OneLogin client se-cret, de-faults to Sys.getenv("ONELOGIN[]C
+LIENT[]SECRET") 
+[1{/Users/alexkgold/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
+p}] (./Rd2.ind [2] [3]) (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information){/Users/alexkgold/Library/T
+inyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}</Users/alexkgold/Li
+brary/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></
+Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></Users/alexkgold/Library/TinyTeX/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsl10.pfb></Users/alexkgold/Library/TinyTeX/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users/alexkgold/Library/T
+inyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Rd2.pdf (3 pages, 105960 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [TeX Live 2019] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (1 entries accepted, 0 rejected).
+Sorting entries...done (0 comparisons).
+Generating output file Rd2.ind....done (5 lines written, 0 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2018-12-01>
+(./Rd2.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/bk10.clo))
+(/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/alltt.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1enc.dfu)))
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))))
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def)
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-hyperr
+ef.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-generi
+c.sty))
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+)) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/rerunfilecheck.
+sty))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) (/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/makeidx.sty)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty)
+Writing index file Rd2.idx
+(./Rd2.aux)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/gettitlestrin
+g.sty)) (./Rd2.out) (./Rd2.out)
+(/Users/alexkgold/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ot1zi4.fd)
+
+LaTeX Font Warning: Font shape `OML/zi4/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 31.
+
+(./Rd2.toc) [1{/Users/alexkgold/Library/TinyTeX/texmf-var/fonts/map/pdftex/updm
+ap/pdftex.map}]
+Overfull \hbox (35.84875pt too wide) in paragraph at lines 55--56
+[]\OT1/cmr/m/n/10 OneLogin client se-cret, de-faults to Sys.getenv("ONELOGIN[]C
+LIENT[]SECRET") 
+(./Rd2.ind [2] [3]) (./Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information){/Users/alexkgold/Library/T
+inyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}</Users/alexkgold/Li
+brary/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></
+Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></Users/alexkgold/Library/TinyTeX/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></Users/alexkgold/Library/TinyTeX/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsl10.pfb></Users/alexkgold/Library/TinyTeX/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></Users/alexkgold/Library/T
+inyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Rd2.pdf (3 pages, 106338 bytes).
+Transcript written on Rd2.log.
+Saving output to ‘onelogin-manual.pdf’ ...
+Done
+You may want to clean up by 'rm -Rf /var/folders/gg/83hl7dx92cx65x0fy5dtgldc0000gn/T//RtmpPysBgx/Rd2pdff99a6d884c78'

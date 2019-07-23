@@ -2,15 +2,18 @@ Package: onelogin
 Type: Package
 Title: R Package for Interacting with the OneLogin API
 Version: 0.1.0
-Authors@R: c(person("Alex", "Gold", email = "alexkgold@gmail.com", role = c("aut", "cre")), 
-  person("Cole", "Arendt", email = "cole.arendt@rstudio.com", role = "ctb"))
+Authors@R: person("Alex", "Gold", email = "alexkgold@gmail.com", role = c("aut", "cre"))
 Description: The identity provider [OneLogin]<http://onelogin.com> is used for 
   authentication via Single Sign On (SSO). 
   This package provides an R interface to their API.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    R6
+Imports: R6
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
+NeedsCompilation: no
+Packaged: 2019-07-23 19:43:29 UTC; alexkgold
+Author: Alex Gold [aut, cre]
+Maintainer: Alex Gold <alexkgold@gmail.com>
+Built: R 3.5.2; ; 2019-07-23 19:43:46 UTC; unix
