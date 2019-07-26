@@ -27,9 +27,9 @@ ol_user_get_by_id <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}"))
 }
 
-#' Title
+#' Get Apps for User
 #'
-#' @inheritParams ol_token_get
+#' @inheritParams ol_user_get_by_id
 #'
 #' @return a tibble of user data
 #' @export
@@ -37,18 +37,43 @@ ol_user_get_apps <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}/apps"))
 }
 
+#' Get Roles for a User
+#'
+#' @inheritParams ol_user_get_by_id
+#'
+#' @return a data frame of the user id and role
+#' @export
 ol_user_get_roles <- function(con, id) {
   res <- con$GET(glue::glue("api/1/users/{id}/roles"), res_to_df = FALSE)
 
-  data.frame(roles = unlist(res$data))
+  data.frame(id = id, roles = unlist(res$data))
 }
 
+#' Get Custom fields available for users
+#'
+#' @inheritParams ol_user_get_by_id
+#'
+#' @return tibble of custom fields available
+#' @export
 ol_user_get_custom_fields <- function(con) {
   con$GET(glue::glue("api/1/users/custom_attributes"))
 }
 
 ##### POST
 
+#' Create a 'OneLogin' user.
+#'
+#' For a full listing of available fields, see the [API documentation]<https://developers.onelogin.com/api-docs/1/users/create-user>
+#'
+#' @param con a onelogin connection
+#' @param firstname first name, character
+#' @param lastname last name, character
+#' @param email full email, character
+#' @param username username
+#' @param ... other named parameters for the person
+#'
+#' @return tibble of data returned by API call
+#' @export
 ol_user_create <- function(con, firstname, lastname, email, username, ...) {
   extra_args <- list(...)
 
@@ -77,8 +102,7 @@ ol_user_assign_role <- function(con, id, role_id_array) {
   stopifnot(is.numeric(role_id_array))
 
   con$PUT(glue::glue("api/1/users/{id}/add_roles"),
-                     body = list(role_id_array =
-                                   jsonlite::toJSON(role_id_array, auto_unbox = TRUE)))
+                     body = jsonlite::toJSON(list(role_id_array = role_id_array)))
 }
 
 ol_user_remove_role <- function(con, id, role_id_array) {

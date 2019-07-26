@@ -34,16 +34,6 @@ ONELOGIN <- R6::R6Class(
                  "client_secret:{safer::decrypt_string(self$client_secret)}")))
     },
 
-    raise_error = function(res) {
-      if (httr::http_error(res)) {
-        err <- sprintf('\n\n%s request failed with %s\n',
-                       res$request$url,
-                       httr::http_status(res)$message)
-        message(err)
-        res
-      }
-    },
-
     generate_token = function() {
       res <- self$POST("/auth/oauth2/v2/token",
                        auth_type = "generate_token",
@@ -79,18 +69,19 @@ ONELOGIN <- R6::R6Class(
                    res_to_df = TRUE,
                    ...) {
       req <- file.path(self$host, path)
-      res <- httr::GET(req,
+      httr::GET(req,
                        httr::add_headers(Authorization = self$make_auth()),
                        writer,
                        query = list(...)) %>%
         self$parse_res(res_to_df = res_to_df)
     },
 
-    PUT = function(path, body, encode = 'json', res_to_df = TRUE) {
+    PUT = function(path, body, encode = 'json', res_to_df = TRUE, ...) {
       req <- paste0(self$host, path)
-      res <- httr::PUT(
+      httr::PUT(
         req,
-        httr::add_headers(Authorization = self$make_auth()),
+        httr::add_headers(Authorization = self$make_auth(),
+                          `Content-Type` = "application/json"),
         body = body,
         encode = encode
       ) %>%
@@ -100,7 +91,7 @@ ONELOGIN <- R6::R6Class(
     POST = function(path, body, encode = 'json', res_to_df = TRUE,
                     auth_type = "token") {
       req <- paste0(self$host, path)
-      res <- httr::POST(
+      httr::POST(
         req,
         httr::add_headers(Authorization = self$make_auth(auth_type)),
         body = body,
@@ -110,7 +101,7 @@ ONELOGIN <- R6::R6Class(
 
     DELETE = function(path, body = NULL, encode = 'json', res_to_df = TRUE) {
       req <- paste0(self$host, path)
-      res <- httr::DELETE(req,
+      httr::DELETE(req,
                           httr::add_headers(Authorization = self$make_auth()),
                           body = body,
                           encode = encode) %>%
@@ -118,7 +109,7 @@ ONELOGIN <- R6::R6Class(
     },
 
     parse_res = function(res, res_to_df) {
-      self$raise_error(res)
+      if (httr::http_error(res)) return(res)
       res <- httr::content(res, as = 'parsed')
 
       # Responses come down in pages of 50 -- recurse to get all pages
@@ -131,6 +122,8 @@ ONELOGIN <- R6::R6Class(
 
       if (res_to_df) {
         dat <- bind_rows(dat, self$res_to_df(res))
+      } else {
+        dat <- res
       }
 
       dat
