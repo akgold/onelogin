@@ -144,14 +144,14 @@ ONELOGIN <- R6::R6Class(
 
 #' Define a OneLogin Connection
 #'
-#' Define a connection to the OneLogin API. Please see the [API documentation]<https://developers.onelogin.com/api-docs/1/getting-started/dev-overview>
+#' Define a connection to the OneLogin API. Please see the \href{https://developers.onelogin.com/api-docs/1/getting-started/dev-overview}{API documentation}
 #' for details on using this API and on getting credentials.
 #'
 #' @param region either "US" or "EU", defaults to "US"
 #' @param client_id OneLogin client ID, defaults to Sys.getenv("ONELOGIN_CLIENT_ID")
 #' @param client_secret OneLogin client secret, defaults to Sys.getenv("ONELOGIN_CLIENT_SECRET")
 #'
-#' @return a onelogin connection
+#' @return A 'OneLogin' connection
 #' @export
 #'
 #' @examples

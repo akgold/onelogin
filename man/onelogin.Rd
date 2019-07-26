@@ -18,7 +18,7 @@ onelogin(region = "US", client_id = Sys.getenv("ONELOGIN_CLIENT_ID"),
 a onelogin connection
 }
 \description{
-Define a connection to the OneLogin API. Please see the \link{API documentation}\url{https://developers.onelogin.com/api-docs/1/getting-started/dev-overview}
+Define a connection to the OneLogin API. Please see the \href{https://developers.onelogin.com/api-docs/1/getting-started/dev-overview}{API documentation}
 for details on using this API and on getting credentials.
 }
 \examples{
