@@ -20,8 +20,12 @@ ol_user_create(con, firstname, lastname, email, username, ...)
 \item{...}{other named parameters for the person}
 }
 \value{
-tibble of data returned by API call
+A tibble of user data
 }
 \description{
-For a full listing of available fields, see the \link{API documentation}\url{https://developers.onelogin.com/api-docs/1/users/create-user}
+For a full listing of available fields, see the \href{https://developers.onelogin.com/api-docs/1/users/create-user}{API documentation}
+}
+\examples{
+if (interactive()) ol_user_create(onelogin(), "Fake", "User",
+"fake@user.com", "fake")
 }

@@ -12,7 +12,7 @@ ol_invite_gen_link <- function(con, email) {
                   body = list(email = email),
                   res_to_df = FALSE)
 
-  dplyr::tibble(email = email, link = res$data[[1]])
+  tibble::tibble(email = email, link = res$data[[1]])
 }
 
 #' Send Invite Links

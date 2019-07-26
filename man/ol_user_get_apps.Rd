@@ -4,14 +4,19 @@
 \alias{ol_user_get_apps}
 \title{Get Apps for User}
 \usage{
-ol_user_get_apps(con, id)
+ol_user_get_apps(con, user_id)
 }
 \arguments{
-\item{id}{user id}
+\item{con}{a 'OneLogin' connection}
+
+\item{user_id}{user id}
 }
 \value{
-a tibble of user data
+A tibble of user data (one row)
 }
 \description{
 Get Apps for User
+}
+\examples{
+if (interactive()) ol_user_get_apps(onelogin(), 54400533)
 }

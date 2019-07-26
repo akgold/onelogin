@@ -2,13 +2,19 @@
 % Please edit documentation in R/users.R
 \name{ol_user_get_custom_fields}
 \alias{ol_user_get_custom_fields}
-\title{Get Custom fields available for users}
+\title{Get custom fields available for users}
 \usage{
 ol_user_get_custom_fields(con)
 }
+\arguments{
+\item{con}{a 'OneLogin' connection}
+}
 \value{
-tibble of custom fields available
+A tibble of custom fields available
 }
 \description{
-Get Custom fields available for users
+Get custom fields available for users
+}
+\examples{
+if (interactive()) ol_user_get_custom_fields(onelogin())
 }

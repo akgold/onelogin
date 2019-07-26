@@ -4,14 +4,19 @@
 \alias{ol_user_get_by_id}
 \title{Get a User by their ID}
 \usage{
-ol_user_get_by_id(con, id)
+ol_user_get_by_id(con, user_id)
 }
 \arguments{
-\item{id}{user id}
+\item{con}{a 'OneLogin' connection}
+
+\item{user_id}{user id}
 }
 \value{
-a tibble of user data
+A tibble of user data (one row)
 }
 \description{
 Get a User by their ID
+}
+\examples{
+if (interactive()) ol_user_get_by_id(onelogin(), 54400533)
 }

@@ -7,6 +7,8 @@
 ol_invite_send_link(con, email)
 }
 \arguments{
+\item{con}{a 'OneLogin' connection}
+
 \item{email}{email of a user}
 }
 \description{

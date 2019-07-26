@@ -58,10 +58,11 @@ ONELOGIN <- R6::R6Class(
     },
 
     revoke_token = function() {
-      con$POST("auth/oauth2/revoke",
+      res <- con$POST("auth/oauth2/revoke",
                body = list(access_token = self$access_token),
                auth_type = "generate_token",
                res_to_df = FALSE)
+      res$status %>% tibble::as_tibble()
     },
 
     GET = function(path, writer = httr::write_memory(), parser = 'parsed',
@@ -75,7 +76,7 @@ ONELOGIN <- R6::R6Class(
         self$parse_res(res_to_df = res_to_df)
     },
 
-    PUT = function(path, body, encode = 'json', res_to_df = TRUE, ...) {
+    PUT = function(path, body = NULL, encode = 'json', res_to_df = TRUE, ...) {
       req <- paste0(self$host, path)
       httr::PUT(
         req,
@@ -132,12 +133,12 @@ ONELOGIN <- R6::R6Class(
       data <- res$data
 
       if (all(purrr::map_int(data, length) == 1)) {
-        return(dplyr::as_tibble(data))
+        return(tibble::as_tibble(data))
       }
 
       data %>%
         purrr::map_df(~ purrr::map_if(., is.null, function(x) NA) %>%
-                        dplyr::as_tibble())
+                        tibble::as_tibble())
     }
   )
 )

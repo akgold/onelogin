@@ -2,18 +2,23 @@
 % Please edit documentation in R/users.R
 \name{ol_user_update}
 \alias{ol_user_update}
-\title{Update User Information by ID}
+\title{Update user information by ID}
 \usage{
-ol_user_update(con, id, ...)
+ol_user_update(con, user_id, ...)
 }
 \arguments{
-\item{id}{user id}
+\item{con}{a 'OneLogin' connection}
+
+\item{user_id}{user id}
 
 \item{...}{named parameters to change in request}
 }
 \value{
-tibble of user data
+A tibble of user data
 }
 \description{
-Update User Information by ID
+Update user information by ID
+}
+\examples{
+if (interactive()) ol_user_update(onelogin(), 54963040, firstname = "Fake1")
 }

@@ -13,6 +13,8 @@ Imports:
     R6,
     glue,
     safer,
-    magrittr
+    magrittr,
+    jsonlite,
+    tibble
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

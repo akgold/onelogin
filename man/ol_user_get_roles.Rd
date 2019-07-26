@@ -4,14 +4,19 @@
 \alias{ol_user_get_roles}
 \title{Get Roles for a User}
 \usage{
-ol_user_get_roles(con, id)
+ol_user_get_roles(con, user_id)
 }
 \arguments{
-\item{id}{user id}
+\item{con}{a 'OneLogin' connection}
+
+\item{user_id}{user id}
 }
 \value{
-a data frame of the user id and role
+A data frame of the user id and role
 }
 \description{
 Get Roles for a User
+}
+\examples{
+if (interactive()) ol_user_get_roles(onelogin(), 54400533)
 }
