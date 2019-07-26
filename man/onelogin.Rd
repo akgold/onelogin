@@ -2,7 +2,7 @@
 % Please edit documentation in R/onelogin.R
 \name{onelogin}
 \alias{onelogin}
-\title{Define a OneLogin Connection}
+\title{Define a 'OneLogin' Connection}
 \usage{
 onelogin(region = "US", client_id = Sys.getenv("ONELOGIN_CLIENT_ID"),
   client_secret = Sys.getenv("ONELOGIN_CLIENT_SECRET"))
@@ -10,15 +10,15 @@ onelogin(region = "US", client_id = Sys.getenv("ONELOGIN_CLIENT_ID"),
 \arguments{
 \item{region}{either "US" or "EU", defaults to "US"}
 
-\item{client_id}{OneLogin client ID, defaults to Sys.getenv("ONELOGIN_CLIENT_ID")}
+\item{client_id}{'OneLogin' client ID, defaults to Sys.getenv("ONELOGIN_CLIENT_ID")}
 
-\item{client_secret}{OneLogin client secret, defaults to Sys.getenv("ONELOGIN_CLIENT_SECRET")}
+\item{client_secret}{'OneLogin' client secret, defaults to Sys.getenv("ONELOGIN_CLIENT_SECRET")}
 }
 \value{
-a onelogin connection
+a 'OneLogin' connection
 }
 \description{
-Define a connection to the OneLogin API. Please see the \href{https://developers.onelogin.com/api-docs/1/getting-started/dev-overview}{API documentation}
+Define a connection to the 'OneLogin' API. Please see the \href{https://developers.onelogin.com/api-docs/1/getting-started/dev-overview}{API documentation}
 for details on using this API and on getting credentials.
 }
 \examples{
