@@ -18,7 +18,6 @@ ONELOGIN <- R6::R6Class(
       region <- tolower(region)
       stopifnot(region %in% c("us", "eu"))
 
-
       self$host = self$get_host(region)
       message(glue::glue("Defining onelogin API connection {self$host}"))
       self$client_id = safer::encrypt_string(client_id)

@@ -7,8 +7,6 @@
 ol_user_update(con, id, ...)
 }
 \arguments{
-\item{con}{a onelogin object}
-
 \item{id}{user id}
 
 \item{...}{named parameters to change in request}

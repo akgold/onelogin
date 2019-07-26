@@ -7,8 +7,6 @@
 ol_user_get_by_id(con, id)
 }
 \arguments{
-\item{con}{a onelogin object}
-
 \item{id}{user id}
 }
 \value{

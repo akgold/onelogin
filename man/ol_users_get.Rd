@@ -7,8 +7,6 @@
 ol_users_get(con, ...)
 }
 \arguments{
-\item{con}{a onelogin object}
-
 \item{...}{filter parameters, optional; see API documentation}
 }
 \value{

@@ -2,16 +2,16 @@
 % Please edit documentation in R/users.R
 \name{ol_user_get_apps}
 \alias{ol_user_get_apps}
-\title{Title}
+\title{Get Apps for User}
 \usage{
 ol_user_get_apps(con, id)
 }
 \arguments{
-\item{con}{a onelogin object}
+\item{id}{user id}
 }
 \value{
 a tibble of user data
 }
 \description{
-Title
+Get Apps for User
 }
