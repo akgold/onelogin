@@ -5,12 +5,12 @@
 #' Get Users from OneLogin
 #'
 #' You can filter the user by various parameters in onelogin. See the
-#' [page in the API docs](https://developers.onelogin.com/api-docs/1/users/get-users) for filter options.
+#' \href{https://developers.onelogin.com/api-docs/1/users/get-users}{page in the API docs} for filter options.
 #'
 #' @inheritParams ol_token_get
 #' @param ... filter parameters, optional; see API documentation
 #'
-#' @return a tibble of users and their attributes
+#' @return A tibble of users and their attributes
 #' @export
 ol_users_get <- function(con,  ...) {
   con$GET("api/1/users", ...)
@@ -21,7 +21,7 @@ ol_users_get <- function(con,  ...) {
 #' @inheritParams ol_token_get
 #' @param id user id
 #'
-#' @return a tibble of user data
+#' @return A tibble of user data
 #' @export
 ol_user_get_by_id <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}"))
@@ -31,7 +31,7 @@ ol_user_get_by_id <- function(con, id) {
 #'
 #' @inheritParams ol_user_get_by_id
 #'
-#' @return a tibble of user data
+#' @return A tibble of user data
 #' @export
 ol_user_get_apps <- function(con, id) {
   con$GET(glue::glue("api/1/users/{id}/apps"))
@@ -41,19 +41,19 @@ ol_user_get_apps <- function(con, id) {
 #'
 #' @inheritParams ol_user_get_by_id
 #'
-#' @return a data frame of the user id and role
+#' @return A data frame of the user id and role
 #' @export
 ol_user_get_roles <- function(con, id) {
   res <- con$GET(glue::glue("api/1/users/{id}/roles"), res_to_df = FALSE)
 
-  data.frame(id = id, roles = unlist(res$data))
+  dplyr::tibble(id = id, roles = unlist(res$data))
 }
 
-#' Get Custom fields available for users
+#' Get custom fields available for users
 #'
 #' @inheritParams ol_user_get_by_id
 #'
-#' @return tibble of custom fields available
+#' @return A tibble of custom fields available
 #' @export
 ol_user_get_custom_fields <- function(con) {
   con$GET(glue::glue("api/1/users/custom_attributes"))
@@ -63,7 +63,7 @@ ol_user_get_custom_fields <- function(con) {
 
 #' Create a 'OneLogin' user.
 #'
-#' For a full listing of available fields, see the [API documentation]<https://developers.onelogin.com/api-docs/1/users/create-user>
+#' For a full listing of available fields, see the \href{https://developers.onelogin.com/api-docs/1/users/create-user}{API documentation}
 #'
 #' @param con a onelogin connection
 #' @param firstname first name, character
@@ -72,7 +72,7 @@ ol_user_get_custom_fields <- function(con) {
 #' @param username username
 #' @param ... other named parameters for the person
 #'
-#' @return tibble of data returned by API call
+#' @return A tibble of data returned by API call
 #' @export
 ol_user_create <- function(con, firstname, lastname, email, username, ...) {
   extra_args <- list(...)
@@ -87,12 +87,12 @@ ol_user_create <- function(con, firstname, lastname, email, username, ...) {
 
 ###### PUT
 
-#' Update User Information by ID
+#' Update user information by ID
 #'
 #' @inheritParams ol_user_get_by_id
 #' @param ... named parameters to change in request
 #'
-#' @return tibble of user data
+#' @return A tibble of user data
 #' @export
 ol_user_update <- function(con, id, ...) {
   con$PUT(glue::glue("api/1/users/{id}"), body = list(...))
