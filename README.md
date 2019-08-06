@@ -8,7 +8,7 @@ The goal of onelogin is to wrap the API for the identity provider onelogin.com.
 
 ## Installation
 
-You can install the current version of onelogin from github, 
+You can install the current version of onelogin CRAN at <https://cran.r-project.org/web/packages/onelogin/index.html> or the development version from 'github' using
 
 ```
 devtools::install_github("akgold/onelogin")
