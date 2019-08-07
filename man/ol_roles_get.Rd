@@ -9,7 +9,7 @@ ol_roles_get(con, ...)
 \arguments{
 \item{con}{a 'OneLogin' connection}
 
-\item{...}{filters for the roles. See options in the \href{API docs}{https://developers.onelogin.com/api-docs/1/roles/get-roles}.}
+\item{...}{filters for the roles. See options in the \href{https://developers.onelogin.com/api-docs/1/roles/get-roles}{API docs}.}
 }
 \value{
 a tibble of roles

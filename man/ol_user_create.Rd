@@ -7,7 +7,7 @@
 ol_user_create(con, firstname, lastname, email, username, ...)
 }
 \arguments{
-\item{con}{a onelogin connection}
+\item{con}{a 'OneLogin' connection}
 
 \item{firstname}{first name, character}
 

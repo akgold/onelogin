@@ -7,6 +7,9 @@
 #'
 #' @return data frame with email and invite link
 #' @export
+#'
+#' @examples
+#' if(interactive()) ol_invite_gen_link(onelogin(), "example@example.com")
 ol_invite_gen_link <- function(con, email) {
   res <- con$POST("api/1/invites/get_invite_link",
                   body = list(email = email),
@@ -21,6 +24,9 @@ ol_invite_gen_link <- function(con, email) {
 #'
 #' @return NULL
 #' @export
+#'
+#' @examples
+#' if (interactive()) ol_invite_send_link(onelogin(), "example@example.com")
 ol_invite_send_link <- function(con, email) {
   con$POST("api/1/invites/send_invite_link", body = list(email = email))
 }

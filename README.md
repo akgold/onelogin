@@ -4,11 +4,11 @@
 [![CRAN status](https://www.r-pkg.org/badges/version/onelogin)](https://cran.r-project.org/package=onelogin)
 <!-- badges: end -->
 
-The goal of onelogin is to wrap the API for the identity provider onelogin.com.
+The goal of `onelogin` is to wrap the API for the identity provider 'OneLogin'.
 
 ## Installation
 
-You can install the current version of onelogin CRAN at <https://cran.r-project.org/web/packages/onelogin/index.html> or the development version from 'github' using
+You can install the current version of `onelogin` on CRAN at <https://CRAN.R-project.org/package=onelogin> or the development version from 'github' using
 
 ```
 devtools::install_github("akgold/onelogin")

@@ -3,6 +3,8 @@
 export("%>%")
 export(ol_invite_gen_link)
 export(ol_invite_send_link)
+export(ol_role_get_by_id)
+export(ol_roles_get)
 export(ol_token_get)
 export(ol_token_get_rate_limit)
 export(ol_token_refresh)

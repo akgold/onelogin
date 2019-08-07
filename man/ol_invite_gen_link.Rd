@@ -17,3 +17,6 @@ data frame with email and invite link
 \description{
 Generate Invite Link
 }
+\examples{
+if(interactive()) ol_invite_gen_link(onelogin(), "example@example.com")
+}

@@ -21,7 +21,7 @@ ol_user_pwd_sha256_salt(con, user_id, password, password_confirmation,
 \item{password_salt}{defaults to ""}
 }
 \description{
-See the \href{https://developers.onelogin.com/api-docs/1/users/set-password-using-sha-256}{API docs} for detauls on how to encrypt the password.
+See the \href{https://developers.onelogin.com/api-docs/1/users/set-password-using-sha-256}{API docs} for details on how to encrypt the password.
 }
 \examples{
 if (interactive()) ol_user_pwd_sha256_salt(onelogin(), 54963040,

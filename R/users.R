@@ -84,7 +84,7 @@ ol_user_get_custom_fields <- function(con) {
 #'
 #' For a full listing of available fields, see the \href{https://developers.onelogin.com/api-docs/1/users/create-user}{API documentation}
 #'
-#' @param con a onelogin connection
+#' @param con a 'OneLogin' connection
 #' @param firstname first name, character
 #' @param lastname last name, character
 #' @param email full email, character
@@ -177,7 +177,7 @@ ol_user_pwd_cleartext <- function(con, user_id,
 
 #' Set or changes user's password after encryption
 #'
-#' See the \href{https://developers.onelogin.com/api-docs/1/users/set-password-using-sha-256}{API docs} for detauls on how to encrypt the password.
+#' See the \href{https://developers.onelogin.com/api-docs/1/users/set-password-using-sha-256}{API docs} for details on how to encrypt the password.
 #'
 #' @inheritParams ol_user_pwd_cleartext
 #' @param password_algorithm algorithm, defaults to "salt+sha256"

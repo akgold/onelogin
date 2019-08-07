@@ -14,3 +14,6 @@ ol_invite_send_link(con, email)
 \description{
 Send Invite Links
 }
+\examples{
+if (interactive()) ol_invite_send_link(onelogin(), "example@example.com")
+}
