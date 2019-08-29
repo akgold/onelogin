@@ -116,12 +116,12 @@ ONELOGIN <- R6::R6Class(
       dat <- NULL
       if (!is.null(res$pagination$next_link)) {
         # Need to remove host from next link or get twice is self$GET
-        req <- sub(con$host, "", res$pagination$next_link)
+        req <- sub(self$host, "", res$pagination$next_link)
         dat <- self$GET(req)
       }
 
       if (res_to_df) {
-        dat <- bind_rows(dat, self$res_to_df(res))
+        dat <- dplyr::bind_rows(dat, self$res_to_df(res))
       } else {
         dat <- res
       }
